@@ -1,0 +1,54 @@
+{
+  "title": "re-assign cmd/option/ctrl + tab",
+  "rules": [
+    {
+      "description": "cmd + tab to ctrl + tab, option + tab to cmd + tab",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

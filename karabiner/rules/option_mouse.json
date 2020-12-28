@@ -1,0 +1,239 @@
+{
+    "title": "use right_option to control mouse",
+    "maintainers": [
+        "k--chow"
+    ],
+    "rules":
+    [
+        {
+          "description": "right_option + u/o to mouse click left/right",
+          "manipulators": [
+                {
+                    "from": {
+                        "key_code": "u",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "pointing_button": "button1"
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "o",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "pointing_button": "button2"
+                        }
+                    ],
+                    "type": "basic"
+                }
+              ]
+        },
+        {
+          "description": "right_option + shift + i/k to scroll wheel up/down",
+          "manipulators": [
+                {
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "vertical_wheel": -64
+                            }
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "i",
+                        "modifiers": {
+                            "mandatory": [
+                              "right_option",
+                              "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "vertical_wheel": 64
+                            }
+                        }
+                    ],
+                    "type": "basic"
+                }
+
+            ]
+        },
+        {
+          "description": "right_option + i/j/k/l (8/h/,/;) to move mouse slow (fast)",
+          "manipulators": [
+                {
+                    "from": {
+                        "key_code": "j",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "x": -700
+                            }
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "y": 700
+                            }
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "i",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "y": -700
+                            }
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "x": 700
+                            }
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "h",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "x": -3000
+                            }
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "comma",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "y": 3000
+                            }
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "8",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "y": -3000
+                            }
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "semicolon",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "x": 3000
+                            }
+                        }
+                    ],
+                    "type": "basic"
+                }
+              ]
+        }
+    ]
+}
