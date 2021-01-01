@@ -2,7 +2,7 @@
   "title": "application-specific key mappings",
   "rules": [
     {
-      "description": "atom: left_ctrl + b to run all code below",
+      "description": "atom: run all code below and toggle panes",
       "manipulators": [
         { "conditions": [
              {
@@ -26,6 +26,58 @@
             },
             {
               "key_code": "return_or_enter",
+              "modifiers": ["left_command"]
+            }
+          ]
+        },
+        { "conditions": [
+             {
+               "bundle_identifiers": [
+                   "com.github.atom"
+               ],
+               "type": "frontmost_application_if"
+             }
+           ],
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [ "left_control" ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "k",
+              "modifiers": ["left_command"]
+            },
+            {
+              "key_code": "left_arrow",
+              "modifiers": ["left_command"]
+            }
+          ]
+        },
+        { "conditions": [
+             {
+               "bundle_identifiers": [
+                   "com.github.atom"
+               ],
+               "type": "frontmost_application_if"
+             }
+           ],
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [ "left_control" ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "k",
+              "modifiers": ["left_command"]
+            },
+            {
+              "key_code": "right_arrow",
               "modifiers": ["left_command"]
             }
           ]

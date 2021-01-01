@@ -108,7 +108,14 @@
     {
       "description": "left_cmd + p to duplicate the current line",
       "manipulators": [
-        {
+        { "conditions": [
+             {
+               "bundle_identifiers": [
+                   "com.github.GitHubClient"
+               ],
+               "type": "frontmost_application_unless"
+             }
+           ],
           "type": "basic",
           "from": {
             "key_code": "p",
