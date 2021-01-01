@@ -4,7 +4,14 @@
     {
       "description": "left_cmd + (shift) + d to delete the current line (no space)",
       "manipulators": [
-        {
+        { "conditions": [
+             {
+               "bundle_identifiers": [
+                   "com.apple.Terminal"
+               ],
+               "type": "frontmost_application_unless"
+             }
+           ],
           "type": "basic",
           "from": {
             "key_code": "d",
@@ -51,14 +58,14 @@
       ]
     },
     {
-      "description": "left_cmd + (shift) + backspace to delete to start (end) of line",
+      "description": "right_option + (shift) + backspace to delete to start (end) of line",
       "manipulators": [
         {
           "type": "basic",
           "from": {
             "key_code": "delete_or_backspace",
             "modifiers": {
-              "mandatory": [ "left_command" ]
+              "mandatory": [ "right_option" ]
             }
           },
           "to": [
@@ -71,12 +78,19 @@
             }
           ]
         },
-        {
+        { "conditions": [
+             {
+               "bundle_identifiers": [
+                   "com.apple.Terminal"
+               ],
+               "type": "frontmost_application_unless"
+             }
+           ],
           "type": "basic",
           "from": {
             "key_code": "delete_or_backspace",
             "modifiers": {
-              "mandatory": [ "left_command", "shift" ]
+              "mandatory": [ "right_option", "shift" ]
             }
           },
           "to": [

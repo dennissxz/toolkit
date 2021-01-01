@@ -134,7 +134,14 @@
       {
         "description": "left_cmd + u/o to cmd + left/right, move to line start/end",
         "manipulators": [
-          {
+          { "conditions": [
+               {
+                 "bundle_identifiers": [
+                     "com.apple.Terminal"
+                 ],
+                 "type": "frontmost_application_unless"
+               }
+             ],
             "type": "basic",
             "from": {
               "key_code": "u",
@@ -156,7 +163,14 @@
               }
             ]
           },
-          {
+          { "conditions": [
+               {
+                 "bundle_identifiers": [
+                     "com.apple.Terminal"
+                 ],
+                 "type": "frontmost_application_unless"
+               }
+             ],
             "type": "basic",
             "from": {
               "key_code": "o",
